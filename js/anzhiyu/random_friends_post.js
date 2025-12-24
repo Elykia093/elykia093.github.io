@@ -154,9 +154,9 @@ function fetchRandomPost() {
       fetch(fetchUrl)
         .then(res => res.json())
         .then(json => {
-          var title = json[0].title;
-          var link = json[0].link;
-          var author = json[0].author;
+          var title = json.title;
+          var link = json.link;
+          var author = json.author;
           if (document.getElementById("random-post")) {
             window.setTimeout(function () {
               document.getElementById("random-post").innerHTML =
